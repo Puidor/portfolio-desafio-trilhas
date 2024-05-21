@@ -1,0 +1,156 @@
+/* Telas até 768px */
+@media (max-width: 860px) {
+  body {
+    overflow: hidden;
+  }
+
+  label {
+    display: initial;
+  }
+
+  label .menu-mobile {
+    position: absolute;
+    right: -100px;
+    top: -100px;
+    z-index: 100;
+    width: 200px;
+    height: 200px;
+    background: #fff;
+    border-radius: 50% 50% 50% 50%;
+    -webkit-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+    box-shadow: 0 0 0 0 #fff, 0 0 0 0 #fff;
+    cursor: pointer;
+  }
+
+  label .hamburger {
+    position: absolute;
+    top: 135px;
+    left: 50px;
+    width: 30px;
+    height: 2px;
+    background: #69d2e7;
+    display: block;
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+  }
+
+  label .hamburger:after,
+  label .hamburger:before {
+    -webkit-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #69d2e7;
+  }
+
+  label .hamburger:before {
+    top: -10px;
+  }
+
+  label .hamburger:after {
+    bottom: -10px;
+  }
+
+  label input {
+    display: none;
+  }
+
+  label input:checked + .menu-mobile {
+    box-shadow: 0 0 0 100vw #fff, 0 0 0 100vh #fff;
+    border-radius: 0;
+  }
+
+  label input:checked + .menu-mobile .hamburger {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  label input:checked + .menu-mobile .hamburger:after {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    bottom: 0;
+  }
+
+  label input:checked + .menu-mobile .hamburger:before {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    top: 0;
+  }
+
+  label input:checked + .menu-mobile + ul {
+    opacity: 1;
+  }
+
+  label ul {
+    z-index: 200;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    -webkit-transition: 0.25s 0s ease-in-out;
+    transition: 0.25s 0s ease-in-out;
+  }
+
+  label a {
+    color: var(--bg-color);
+    text-decoration: none;
+  }
+
+  label a:hover {
+    opacity: 0.6;
+  }
+
+  label ul li {
+    list-style: none;
+    margin-bottom: 1.5rem;
+  }
+
+  label ul li .btn-blog {
+    padding: 1rem 5rem;
+  }
+
+  label ul li .btn-blog:hover {
+    opacity: 0.6;
+  }
+
+  /*=== Navigation Menu =================================*/
+  #navbar {
+    flex-direction: column;
+  }
+
+  #navbar .menu {
+    flex-direction: column;
+    display: none;
+  }
+
+  /*=== Sobre Nós =================================*/
+  #sobre-nos {
+    flex-direction: column;
+    margin-inline: 0;
+  }
+
+  .sobre-nos__title {
+    width: 100%;
+    padding: 2rem;
+  }
+
+  .sobre-nos__title h1 {
+    font-family: var(--font-sans);
+    margin-top: 2rem;
+    font-weight: 600;
+    font-size: 2.6rem;
+  }
+
+  #sobre-nos img {
+    margin-top: 10rem;
+    width: 90%;
+  }
+}

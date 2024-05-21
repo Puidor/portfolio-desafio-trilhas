@@ -1,0 +1,188 @@
+/*=== Initial Style =================================*/
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: #0a192f;
+  --green: #64ffda;
+  --gray: #8892b0;
+  --font-mono: "Fira Mono", monospace;
+  --font-sans: "Inter", sans-serif;
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  overflow-x: hidden;
+}
+
+body {
+  font-size: 1.6rem;
+  line-height: 1.3;
+  color: white;
+  font-family: var(--font-mono);
+  background-color: var(--bg-color);
+  width: 100vw;
+}
+
+a {
+  color: var(--green);
+  text-decoration: none;
+}
+
+/*=== Hamburguer Menu =================================*/
+
+label {
+  display: none;
+}
+/*=== Navigation Menu =================================*/
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 3rem;
+  margin-inline: 10%;
+  padding-inline: 2.4rem;
+}
+
+.logo img {
+  width: 100px;
+  height: auto;
+}
+
+.menu__itens {
+  color: white;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  list-style: none;
+}
+
+.menu__itens li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  font-size: 1.4rem;
+  transition: 0.3s;
+}
+
+.menu__itens li a:hover {
+  color: var(--green);
+  opacity: 0.7;
+}
+
+.btn-blog {
+  background-color: none;
+  border: 1px solid var(--green);
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.4rem;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.main-content {
+  margin-top: 5rem;
+}
+
+/*=== Sobre Nós =================================*/
+#sobre-nos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-inline: 10%;
+}
+
+.sobre-nos__title {
+  width: 60rem;
+}
+
+.sobre-nos__title p {
+  color: var(--green);
+  margin-bottom: 2rem;
+}
+
+.sobre-nos__title h1 {
+  font-family: var(--font-sans);
+  margin-top: 2rem;
+  font-weight: 600;
+  font-size: 3.6rem;
+}
+
+.sobre-nos__title h2 {
+  margin-top: 10px;
+  color: var(--gray);
+}
+
+#sobre-nos img {
+  width: 45%;
+  max-inline-size: 100%;
+  block-size: auto;
+}
+
+.portfolio__cards__item_description {
+  margin-top: 20px;
+}
+.portfolio__cards__item_description a {
+  background-color: none;
+  border: 1px solid var(--green);
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.4rem;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.portfolio__cards__item_description a:hover {
+  color: var(--green);
+  opacity: 0.7;
+}
+
+/*=== Footer =================================*/
+footer {
+  margin-top: 10rem;
+  margin-bottom: 5rem;
+  font: 1.6rem var(--font-sans);
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer span {
+  font: 1.6rem var(--font-mono);
+  color: var(--green);
+}
+.footer span:hover {
+  opacity: 0.7;
+}
+
+.footer a {
+  color: white;
+  font-size: 2.5rem;
+  margin-right: 1rem;
+}
+
+.footer a:hover,
+.footer span:hover {
+  transform: translateY(-2px);
+}
