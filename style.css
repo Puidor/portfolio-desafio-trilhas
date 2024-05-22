@@ -111,12 +111,11 @@ label {
 
 .sobre-nos__title p {
   color: var(--green);
-  margin-bottom: 2rem;
 }
 
 .sobre-nos__title h1 {
   font-family: var(--font-sans);
-  margin-top: 2rem;
+  margin-top: 1rem;
   font-weight: 600;
   font-size: 3.6rem;
 }
@@ -185,4 +184,39 @@ footer {
 .footer a:hover,
 .footer span:hover {
   transform: translateY(-2px);
+}
+
+/*=== Habilidades =================================*/
+#habilidades {
+  margin-top: 10rem;
+  margin-inline: 10%;
+}
+
+.habilidades__title h1 {
+  font-weight: 600;
+  font-size: 3.6rem;
+  color: var(--green);
+}
+.habilidades__title h4 {
+  color: var(--gray);
+}
+.habilidades__cards {
+  display: flex;
+  gap: 4rem;
+  flex-direction: row;
+  align-items: center;
+}
+.habilidades__cards__item {
+  border: 1px solid var(--green);
+  margin-top: 5rem;
+  padding: 5rem;
+}
+
+.habilidades__cards__item:hover {
+  transform: translateY(-5px);
+}
+
+.habilidades__cards__item p {
+  color: var(--green);
+  margin-left: 1rem;
 }
