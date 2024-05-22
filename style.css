@@ -114,6 +114,7 @@ label {
 }
 
 .sobre-nos__title h1 {
+  width: fit-content;
   font-family: var(--font-sans);
   margin-top: 1rem;
   font-weight: 600;
@@ -316,4 +317,31 @@ footer {
 
 .portfolio__button a:hover {
   opacity: 0.7;
+}
+
+/* Typer effect */
+.sobre-nos__title h1 {
+  overflow: hidden;
+  border-right: 0.05em solid var(--green);
+  white-space: nowrap;
+  animation: digitando 1.5s steps(12, start), traco_piscando 0.8s step-start 0.8s infinite;
+}
+
+@keyframes digitando {
+  from {
+    width: 0;
+  }
+  to {
+    width: 52%;
+  }
+}
+
+@keyframes traco_piscando {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: var(--green);
+  }
 }
